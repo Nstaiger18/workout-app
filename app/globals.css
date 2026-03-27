@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-bg text-white;
+}
+
+.app-shell {
+  @apply min-h-screen flex flex-col max-w-md mx-auto bg-bg;
+}
+
+.app-content {
+  @apply flex-1 px-4 pb-20 pt-4;
+}
+
+.card {
+  @apply bg-card rounded-xl p-4 shadow-lg shadow-slate-900/60;
+}
+
+.tile-title {
+  @apply text-sm font-semibold text-textSoft uppercase tracking-wide;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-slate-900 shadow-md shadow-cyan-500/40;
+}
+
+.pill-progress {
+  @apply h-3 rounded-full bg-slate-800 overflow-hidden;
+}
