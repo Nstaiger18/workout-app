@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import type { Exercise } from "@lib/types";
 import { getExercises, addCustomExercise } from "@lib/exercises";
 import {
   getSelectedExercises,
@@ -9,13 +10,14 @@ import {
 } from "@lib/exerciseSelection";
 
 export default function ExerciseSettingsPage() {
-  const [allExercises, setAllExercises] = useState([]);
-  const [selected, setSelected] = useState<SelectedExercises>({
-    squat: "",
-    hinge: "",
-    push: "",
-    pull: ""
-  });
+  const [allExercises, setAllExercises] = useState<Exercise[]>([]);
+const [selected, setSelected] = useState<SelectedExercises>({
+  squat: "",
+  hinge: "",
+  push: "",
+  pull: ""
+});
+
 
   const [customName, setCustomName] = useState("");
   const [customPattern, setCustomPattern] = useState<"squat" | "hinge" | "push" | "pull">("squat");
